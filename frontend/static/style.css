@@ -7,6 +7,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100vh;
     color: white;
 }
@@ -45,4 +46,43 @@ h1 {
     background-color: #2E3EA1;
     color: white;
     transform: translateY(-5px);
+}
+
+.input-box {
+    width: 80%;
+    max-width: 800px;
+    height: 200px;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: vertical;
+    margin: 20px auto;
+    display: block;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.input-box:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
 }

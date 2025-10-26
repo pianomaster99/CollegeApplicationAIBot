@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Essay Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Essay Section</h1>
+    <p>Paste or type your essay below:</p>
+
+    <form action="/submit_essay" method="post">
+        <textarea class="input-box" name="essay_text" placeholder="Write your essay here..." style="width: 800px; height:550px;"></textarea>
+        <button class="submit-button" type="submit">Submit Essay</button>
+    </form>
+
+    <a href="/" class="big-button">Back to Home</a>
+</body>
+</html>
