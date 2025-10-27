@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import os
+import backend.api_calls as api_calls
 
 app = Flask(__name__)
 
@@ -36,7 +37,12 @@ def submit_essay():
     essay_text = request.form.get("essay_text")
     
     print("Received essay:", essay_text)
-    return render_template("essay_received.html", response="Get a job")
+    response_text = api_calls.analyze_essay(essay_text)
+    return render_template("essay_received.html", response=response_text)
+
+@app.route("/submit_acitivites", methods=["Post"])
+def submit_activities():
+    pass
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))

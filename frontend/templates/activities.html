@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <title>Activities</title>
+</head>
+
+<body>
+
+    <h1>Acitivities Section</h1>
+    <form action="/submit_activities" method="post">
+        {% for i in range(1, 11) %}
+            <div class="input-container">
+                <h1 class="input-header">Activity 1</h1>
+                <textarea class="input-box" name="activity1_text" placeholder="Write Activity 1 here ..." ></textarea>
+            </div>
+        {% endfor %}
+    </form>
+
+</body>
+
+</html>
